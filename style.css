@@ -8,13 +8,14 @@
 
 .white { /* 強調表示するセル */
   background-color: rgba(255, 255, 0, 0.6);
+  border-radius: 8px;
 }
 
-.white .username{
-  color: black !important;
+.white .username{ /* 強調表示するセルのユーザネーム */
+  color: gray !important;
 }
 
-.likes-icon {
+.likes-icon { /* 視聴回数とライク数 */
   text-shadow: 0px 0px 3px black;
 }
 
