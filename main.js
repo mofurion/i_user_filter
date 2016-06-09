@@ -90,14 +90,10 @@ chrome.storage.local.get(default_data, function(saved){
 
 	FLAGS.forEach(function(flag){
 		var text = saved[flag].trim();
-		console.log(flag, text);
 		list[flag] = text.split(/\r*\n+/);
 	});
 
-	console.dir(saved);
-	console.log(list);
-
 	add_flag_data(cells, list);
-	add_likes_data(cells);
-	rebuild_cells(cells, rows);
+  rebuild_cells(cells, rows);
+	add_likes_data(cells); //rebuild_cellsで一旦クラスを全て消すからこれは下にする必要がある
 });
