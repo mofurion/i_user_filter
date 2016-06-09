@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset=utf-8">
+    <title>iwara user filter - options</title>
+
+    <style>
+      textarea {
+        width: 30em;
+        height: 10em;
+      }
+    </style>
+  </head>
+
+  <body>
+     <p>1行に1ユーザ記入し、保存ボタンを押してください。</p>
+    <div>
+      <p>非表示にするユーザ</p>
+      <textarea id="black"></textarea>
+    </div>
+
+    <div>
+      <p>半透明にするユーザ</p>
+      <textarea id="gray"></textarea>
+    </div>
+
+    <div>
+      <p>強調表示するユーザ</p>
+      <textarea id="white"></textarea>
+    </div>
+
+    <button id="save">保存</button><output id="status"></output>
+
+    <script src="options.js"></script>
+  </body>
+</html>

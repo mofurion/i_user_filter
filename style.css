@@ -1,0 +1,28 @@
+.gray {
+	opacity: 0.3;
+}
+
+.white {
+	background-color: rgba(255, 255, 0, 0.6);
+}
+
+.white .username{
+	color: black !important;
+}
+
+.likes-icon {
+	background-color: hsla(0, 0%, 60%, 0.7);
+	border-radius: 3px;
+	padding: 0px 4px;
+}
+
+.likes-over50 .right-icon {
+	background-color: hsla(0, 0%, 30%, 0.7);
+  color: orange !important;
+}
+
+.likes-over100 .right-icon,
+.likes-over200 .right-icon{
+	background-color: hsla(0, 0%, 80%, 0.7);
+	color: red !important;
+}
