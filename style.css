@@ -1,8 +1,12 @@
-.gray {
+.black { /* NGユーザのセル(ページから切り離されてるので非表示) */
+
+}
+
+.gray { /* 半透明にするセル */
   opacity: 0.3;
 }
 
-.white {
+.white { /* 強調表示するセル */
   background-color: rgba(255, 255, 0, 0.6);
 }
 
@@ -11,18 +15,45 @@
 }
 
 .likes-icon {
-  background-color: hsla(0, 0%, 60%, 0.7);
-  border-radius: 3px;
-  padding: 0px 4px;
+  text-shadow: 0px 0px 3px black;
 }
 
 .likes-over50 .right-icon {
-  background-color: hsla(0, 0%, 30%, 0.7);
-  color: orange !important;
+  color: yellow !important;
 }
 
 .likes-over100 .right-icon,
 .likes-over200 .right-icon{
-  background-color: hsla(0, 0%, 80%, 0.7);
+  text-shadow: 0px 1px 2px white, 0px -1px 2px white;
   color: red !important;
 }
+
+/*
+  「.views-column」が一つの動画のセルです。
+
+  スクリプト側では、ユーザリストに当てはまるセルに以下のクラスを追加しています。
+  「black」：NGユーザの動画
+  「gray」：半透明にするユーザの動画
+  「white」：強調表示するユーザの動画
+  「likes-over50」：LIKEが50を超えている動画
+  「likes-over100」：LIKEが100を超えている動画
+  「likes-over200」：LIKEが200を超えている動画
+
+  ただし「black」だった場合は完全にページから取り外します。
+  また、クラス名以外にdata-userにユーザ名、data-likesにライク数を書き込むのでそれらもCSS側で使用可能です。
+
+  サイトリニューアルされたらもう無意味だけど、そのときはスクリプト全体が動かなくなるから問題ないですね。
+*/
+
+/* おまけ */
+
+/* コメントアウトすると、カーソル下のセルを拡大表示
+.node > div {
+  transition: 0.2s;
+  transform-origin: bottom;
+}
+
+.node > div:hover {
+  transform: scale(1.5);
+}
+*/
