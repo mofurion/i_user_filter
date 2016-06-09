@@ -23,10 +23,15 @@
   color: yellow !important;
 }
 
-.likes-over100 .right-icon,
-.likes-over200 .right-icon{
+.likes-over100 .right-icon {
   text-shadow: 0px 1px 2px white, 0px -1px 2px white;
   color: red !important;
+}
+
+.likes-over200 .right-icon{
+  text-shadow: 0px 1px 2px white, 0px -1px 2px white;
+  -webkit-text-stroke: 0.5px black;
+  color: deeppink !important;
 }
 
 /*
